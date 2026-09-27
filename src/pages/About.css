@@ -1,0 +1,337 @@
+.about-page {
+  min-height: 100vh;
+  padding: 120px 0 72px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(255, 255, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 86% 28%, rgba(255, 255, 255, 0.1), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 420px);
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+  gap: 48px;
+  align-items: center;
+  min-height: 520px;
+}
+
+.about-kicker,
+.about-section-label,
+.about-tone-card span {
+  display: inline-flex;
+  color: var(--accent-cyan);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about-hero-copy h1 {
+  margin: 14px 0 18px;
+  color: #fff;
+  font-size: clamp(3.2rem, 8vw, 7.4rem);
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.about-hero-copy p {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.55;
+}
+
+.about-hero-visual {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+.about-hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.72)),
+    radial-gradient(circle at 45% 35%, rgba(255, 255, 255, 0.16), transparent 38%);
+}
+
+.about-hero-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+  transform: scale(1.03);
+}
+
+.about-hero-badge {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  z-index: 1;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.about-story-band {
+  margin: 36px 0 34px;
+  padding: 56px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 38%),
+    rgba(255, 255, 255, 0.025);
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.about-story-grid h2,
+.about-section-header h2,
+.about-tone-card h2 {
+  margin: 10px 0 0;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.03;
+  letter-spacing: 0;
+}
+
+.about-story-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.about-story-copy p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.about-section {
+  padding: 48px 2rem 22px;
+}
+
+.about-section-header {
+  max-width: 760px;
+  margin-bottom: 26px;
+}
+
+.about-section-header.compact {
+  max-width: 680px;
+}
+
+.about-products-grid,
+.about-reasons-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.about-products-grid {
+  grid-template-columns: 1.35fr 1fr 1fr;
+}
+
+.about-product-card,
+.about-reason-card,
+.about-tone-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(18, 18, 18, 0.72);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+.about-product-card {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 26px;
+}
+
+.about-product-card.featured {
+  grid-row: span 2;
+  min-height: 438px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.08)),
+    url('/products/tshirts/black t-shirt.jpeg') center / cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-product-card.featured::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.78));
+}
+
+.about-product-card.featured > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-card-icon {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent-cyan);
+}
+
+.about-product-card.featured .about-card-icon {
+  background: #fff;
+  color: #080808;
+}
+
+.about-product-card h3,
+.about-reason-card h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+}
+
+.about-product-card.featured h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.about-product-card p,
+.about-reason-card p,
+.about-tone-card p {
+  color: rgba(255, 255, 255, 0.64);
+  line-height: 1.62;
+}
+
+.about-product-card.featured p {
+  max-width: 360px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.02rem;
+}
+
+.about-reasons-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.about-reason-card {
+  min-height: 210px;
+  padding: 24px;
+}
+
+.about-reason-card svg {
+  margin-bottom: 18px;
+  color: var(--accent-cyan);
+}
+
+.about-tone-section {
+  padding-top: 44px;
+}
+
+.about-tone-card {
+  padding: clamp(32px, 5vw, 56px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.08)),
+    rgba(18, 18, 18, 0.82);
+  text-align: center;
+}
+
+.about-tone-card h2 {
+  margin-top: 12px;
+  font-size: clamp(2.4rem, 7vw, 5.8rem);
+}
+
+.about-tone-card p {
+  max-width: 680px;
+  margin: 18px auto 0;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 980px) {
+  .about-hero,
+  .about-story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    min-height: auto;
+  }
+
+  .about-hero-visual {
+    min-height: 360px;
+  }
+
+  .about-hero-visual img {
+    min-height: 360px;
+  }
+
+  .about-products-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-product-card.featured {
+    grid-column: 1 / -1;
+    min-height: 360px;
+  }
+
+  .about-reasons-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-page {
+    padding-top: 104px;
+  }
+
+  .about-hero,
+  .about-section,
+  .about-tone-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about-hero-visual {
+    min-height: 300px;
+  }
+
+  .about-hero-visual img {
+    min-height: 300px;
+  }
+
+  .about-story-band {
+    padding: 40px 0;
+  }
+
+  .about-products-grid,
+  .about-reasons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-product-card,
+  .about-reason-card {
+    min-height: auto;
+  }
+
+  .about-product-card.featured {
+    min-height: 330px;
+  }
+}
+
+
